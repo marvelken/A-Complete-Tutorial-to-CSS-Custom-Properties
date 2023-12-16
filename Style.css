@@ -1,0 +1,88 @@
+/* Define vars for the root element */
+:root {
+    --main-bg-color: #f5f5f5; /* Light gray background */
+    --main-txt-color: #333; /* Dark gray text */
+    --container-width: 80%; /* 80% width for the container */
+    --header-bg-color: #4285f4; /* Google blue for the header background */
+    --header-txt-color: #fff; /* White text for the header */
+    --grid-column:repeat(auto-fill, minmax(250px, 1fr));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant font */
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
+
+.container {
+    width: var(--container-width);
+    margin: 20px auto;
+}
+
+header#main-header {
+    background-color: var(--header-bg-color);
+    color: var(--header-txt-color);
+    text-align: center; /* Center-align header text */
+    padding: 20px; /* Add padding for better aesthetics */
+}
+
+header#main-header h1 {
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: var(--grid-column);; /* Responsive grid columns */
+    grid-gap: 20px; /* Consistent gap between grid items */
+}
+
+/* Define box vars */
+.box {
+    --box-bg-color: #fff; /* White background for boxes */
+    --box-main-color: #4285f4; /* Google blue for box borders and shadows */
+    --box-padding: 20px; /* Consistent padding for boxes */
+    --box-shadow-h-offset: 5px;
+    --box-shadow-v-offset: 5px;
+    --box-shadow-blur: 15px;
+}
+/* Define box vars start*/
+.box1 {
+    --box-bg-color1: #ffffff; /* White background for boxes */
+    --box-main-color1: #c9d0db; /* Google blue for box borders and shadows */
+    --box-padding1: 20px; /* Consistent padding for boxes */
+    --box-shadow-h-offset1: 5px;
+    --box-shadow-v-offset1: 5px;
+    --box-shadow-blur1: 5px;
+}
+
+.box1 {
+    background-color: var(--box-bg-color1);
+    padding: var(--box-padding1);
+    border: 2px solid var(--box-main-color1);
+    box-shadow: var(--box-shadow-h-offset1) var(--box-shadow-v-offset1) var(--box-shadow-blur1) var(--box-main-color1);
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+/* Define box vars end*/
+
+
+.box {
+    background-color: var(--box-bg-color);
+    padding: var(--box-padding);
+    border: 2px solid var(--box-main-color);
+    box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) var(--box-main-color);
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.box h1 {
+    color: var(--box-main-color);
+    margin-bottom: 10px; /* Add space between title and paragraph */
+}
+
+.box p {
+    color: #555; /* Dark gray text for paragraphs */
+}
+
+

@@ -1,0 +1,35 @@
+/*Local Variables*/
+/*CSS variables have a scope that is determined by where they are defined. If a variable is defined within a selector, it is accessible only within that selector and its descendants. This can be seen as a form of "local scope" for CSS variables within the context of a selector.
+
+Let's modify the example to illustrate this. Suppose you want to use different box background colors for the light and dark themes, and you want to define these colors locally within the `.box` selector. Here's how you can do that:*/
+
+
+/* ... previous CSS code ... */
+
+/* Define box vars */
+.box {
+    --box-bg-light: #fff; /* Light theme box background color */
+    --box-bg-dark: #333; /* Dark theme box background color */
+    --box-main-color: #4285f4;
+    --box-padding: 20px;
+    --box-shadow-h-offset: 5px;
+    --box-shadow-v-offset: 5px;
+    --box-shadow-blur: 15px;
+}
+
+.box {
+    background-color: var(--box-bg-light);
+    padding: var(--box-padding);
+    border: 2px solid var(--box-main-color);
+    box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) var(--box-main-color);
+    border-radius: 8px;
+}
+
+.box h1 {
+    color: var(--box-main-color);
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #555;
+}

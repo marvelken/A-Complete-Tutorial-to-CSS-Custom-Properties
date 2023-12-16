@@ -1,0 +1,68 @@
+/*Overriding Custom Properties*/
+
+/*Basic Override:*/
+
+:root {
+    --main-color: blue;
+}
+
+.container {
+    --main-color: red; /* Override the --main-color variable within .container */
+    color: var(--main-color); /* Uses the overridden value */
+}
+
+/*Cascade and Inheritance:*/
+
+:root {
+    --main-color: blue;
+}
+
+.container {
+    --main-color: red; /* Override the --main-color variable within .container */
+}
+
+.element {
+    color: var(--main-color); /* Inherits the overridden value from .container */
+}
+
+/*Dynamic Override with JavaScript:*/
+
+:root {
+    --main-color: blue;
+}
+
+.container {
+    --main-color: red; /* Override the --main-color variable within .container */
+}
+
+.js-override {
+    color: var(--main-color); /* Will initially use the overridden value */
+
+    /* JavaScript can dynamically update the --main-color variable */
+    /* For example, document.documentElement.style.setProperty('--main-color', 'green'); */
+}
+
+/*Responsive Override:*/
+
+:root {
+    --container-width: 80%;
+}
+
+.container {
+    --container-width: 100%; /* Override the --container-width variable for full width */
+    width: var(--container-width);
+}
+
+/*Conditional Override:*/
+
+:root {
+    --main-bg-color: #ffffff;
+}
+
+.theme-dark {
+    --main-bg-color: #333333; /* Override the --main-bg-color for dark theme */
+}
+
+.box {
+    background-color: var(--main-bg-color); /* Uses the overridden or default value */
+}

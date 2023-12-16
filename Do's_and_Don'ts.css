@@ -1,0 +1,57 @@
+/*Do's and Don'ts of Custom CSS Properties*/
+
+/*Do's:*/
+
+/*Use Descriptive Names*/
+
+:root {
+    --main-bg-color: #ffffff;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+/*Centralize Style Definitions*/
+
+:root {
+    --font-size: 16px;
+    --main-color: #3498db;
+}
+
+body {
+    font-size: var(--font-size);
+    color: var(--main-color);
+}
+
+/*Override and Adapt*/
+
+.dark-theme {
+    --main-bg-color: #333333;
+    --text-color: #ffffff;
+}
+
+.box {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+/*Don'ts*/
+
+/*Don't Overuse Global Properties*/
+
+:root {
+    --font-size: 16px; /* Good */
+    --header-height: 60px; /* Good */
+
+    --color1: #3498db; /* Potentially excessive */
+    --color2: #27ae60; /* Potentially excessive */
+}
+
+/*Don't Use Variables for Everything:*/
+
+.box {
+    --box-padding: 10px; /* Unnecessary */
+    padding: var(--box-padding);
+}
+

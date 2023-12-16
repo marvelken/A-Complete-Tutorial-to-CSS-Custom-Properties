@@ -1,0 +1,62 @@
+/*Differences between custom variables and pre-processors*/
+
+/*Scope and Inheritance*/
+
+/*CSS Custom Properties*/
+:root {
+    --main-color: blue;
+}
+
+.container {
+    --main-color: red;
+    color: var(--main-color); /* Uses the value from .container */
+}
+
+/*Sass/Less: Pre-processor Variables*/
+
+/*$main-color: blue;
+
+.container {
+    $main-color: red; // This variable affects all instances, not just within .container
+    color: $main-color;
+}*/
+
+/*Dynamic Features*/
+
+/*CSS Custom Properties*/
+
+:root {
+    --main-bg-color: #ffffff;
+}
+
+.box {
+    background-color: var(--main-bg-color);
+}
+
+/*Pre-processor Variables*/
+
+/*
+$main-bg-color: #ffffff;
+
+.box {
+    background-color: $main-bg-color;
+}*/
+
+/*Default Values*/
+
+/*CSS Custom Properties*/
+.box {
+    --main-bg-color: #ffffff;
+    background-color: var(--main-bg-color);
+}
+
+/*Pre-processor Variables*/
+
+/*
+
+$main-bg-color: #ffffff !default;
+
+.box {
+    background-color: $main-bg-color;
+}*/
+

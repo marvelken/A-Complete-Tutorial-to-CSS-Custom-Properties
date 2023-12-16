@@ -1,0 +1,12 @@
+
+/*RESPONSIVENESS*/
+
+:root {
+    --grid-column: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: var(--grid-column);
+    grid-gap: 20px;
+}
